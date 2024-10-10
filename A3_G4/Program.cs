@@ -1,5 +1,6 @@
 using A3_G4.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace A3_G4
 {
@@ -8,6 +9,8 @@ namespace A3_G4
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+            builder.Services.AddDbContext<A3Context>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("A3Context") ?? throw new InvalidOperationException("Connection string 'A3Context' not found.")));
 
             // add entitity-framework
             var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");

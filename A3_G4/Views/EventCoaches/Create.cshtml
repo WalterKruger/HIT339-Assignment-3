@@ -1,0 +1,46 @@
+﻿@model A3_G4.Models.EventCoach
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>EventCoach</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <!--
+                <label asp-for="CoachId" class="control-label"></label>
+                <input asp-for="CoachId" class="form-control" />
+                <span asp-validation-for="CoachId" class="text-danger"></span>
+                -->
+                @Html.LabelFor(model => model.CoachId, "Coach")
+                @Html.DropDownListFor(model => model.CoachId, (SelectList)ViewData["CoachFK"], "Select an option", new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.CoachId)
+            </div>
+            <div class="form-group">
+                <!--<label asp-for="ScheduleId" class="control-label"></label>
+                <input asp-for="ScheduleId" class="form-control" />
+                <span asp-validation-for="ScheduleId" class="text-danger"></span>-->
+                @Html.LabelFor(model => model.ScheduleId, "Schedule")
+                @Html.DropDownListFor(model => model.ScheduleId, (SelectList)ViewData["ScheduleFK"], "Select an option", new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.ScheduleId)
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
