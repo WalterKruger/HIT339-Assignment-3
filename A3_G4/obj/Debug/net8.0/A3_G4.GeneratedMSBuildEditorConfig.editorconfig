@@ -62,8 +62,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5yb2xsZWRNZW1iZXJzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/walte/Desktop/CDU/HIT339 - Distributed Development/A3/A3_G4/HIT339-Assignment-3/A3_G4/Views/EnrolledMembers/Enrol.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5yb2xsZWRNZW1iZXJzXEVucm9sLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/walte/Desktop/CDU/HIT339 - Distributed Development/A3/A3_G4/HIT339-Assignment-3/A3_G4/Views/EnrolledMembers/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5yb2xsZWRNZW1iZXJzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/walte/Desktop/CDU/HIT339 - Distributed Development/A3/A3_G4/HIT339-Assignment-3/A3_G4/Views/EnrolledMembers/MySchedule.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5yb2xsZWRNZW1iZXJzXE15U2NoZWR1bGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/walte/Desktop/CDU/HIT339 - Distributed Development/A3/A3_G4/HIT339-Assignment-3/A3_G4/Views/EventCoaches/Create.cshtml]

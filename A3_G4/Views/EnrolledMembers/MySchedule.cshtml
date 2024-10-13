@@ -1,0 +1,62 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "My Schedule";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<h4 style="color:red">Remove this after we add the account system</h4>
+<form asp-controller="EnrolledMembers" asp-action="MySchedule">
+    <p>
+        <label>User <input type="number" min="0" name="id" /></label>
+        <input type="submit" value="Search" />
+    </p>
+</form>
+
+<a asp-action="Enrol">Enrol in an event</a>
+
+<br>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Event name
+            </th>
+            <th>
+                Location
+            </th>
+            <th>
+                Coaches
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.Name
+                </td>
+                <td>
+                    @item.Location
+                </td>
+                <td>
+                    @if ((ViewBag.coachesFK.ContainsKey(item.ScheduleId)))
+                    {
+                        @foreach (var coach in ViewBag.coachesFK[item.ScheduleId])
+                        {
+                            <a asp-area="" asp-controller="Coaches" asp-action="Details" asp-route-id="@coach.Id">
+                                @coach.Name
+                            </a>
+                            <!--Adds space without extending the link--><span>&shy;</span>
+                        }
+                    }
+
+                    
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

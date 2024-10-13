@@ -178,5 +178,83 @@ namespace A3_G4.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
+
+        // TODO: Change this to get the currently logged in user and redirect if not logged in
+        public async Task<IActionResult> Enrol(int? id = 1)
+        {
+
+            var currentlyEnrolled = _context.EnrolledMember
+                .Where(m => m.MemberId == id)
+                .Select(i => i.ScheduleId)
+                .ToHashSet();
+
+            // Custom dropdown list
+            var memberSelect = _hitdb1.Members.Select(i => new { i.MemberId, FullName = $"{i.FirstName} {i.LastName}" }).ToListAsync();
+            ViewData["MemberFK"] = new SelectList(await memberSelect, "MemberId", "FullName"
+                , id); // TODO: Remove this (it sets the value to the current user)
+
+            var scheduleSelect = _hitdb1.Schedules
+                .Where(i => !currentlyEnrolled.Contains(i.ScheduleId))
+                .Select(i => new { i.ScheduleId, i.Name }).ToListAsync();
+            ViewData["ScheduleFK"] = new SelectList(await scheduleSelect, "ScheduleId", "Name");
+
+            return View();
+        }
+
+        // POST: EnrolledMembers/Create
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost, ActionName("Enrol")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> EnrolConfirmed([Bind("Id,MemberId,ScheduleId")] EnrolledMember enrolledMember)
+        {
+            bool alreadyEnrolled = _context.EnrolledMember
+                .Where(i => (i.ScheduleId == enrolledMember.ScheduleId) && (i.MemberId == enrolledMember.MemberId))
+                .Any();
+
+            if (ModelState.IsValid && VerifyForeignKeys(enrolledMember) && !alreadyEnrolled)
+                {
+                _context.Add(enrolledMember);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(MySchedule));
+            }
+            return RedirectToAction(nameof(Enrol));
+        }
+
+
+
+        public async Task<IActionResult> MySchedule(int? id = 1) {
+            // TODO: Change this to NotFound() after we implement the account system
+            //       and not default to a value of 1
+            if (id == null) { return View(); }
+
+            bool memberExists = _hitdb1.Members.Any(i => i.MemberId == id);
+            if (!memberExists) { return NotFound(); }
+
+            var scheduleFK = _context.EnrolledMember
+                .Where(i => i.MemberId == id)
+                .Select(i => i.ScheduleId)
+                .ToHashSet();
+
+            var coachNameFromID = _hitdb1.Coaches.ToDictionary(i => i.CoachId, i => $"{i.FirstName} {i.LastName}");
+
+            var coachesFK = _context.EventCoach
+                .GroupBy(ec => ec.ScheduleId)
+                .ToDictionary(
+                    i => i.Key, 
+                    i => i.Select(ec => new { Id = ec.CoachId, Name = coachNameFromID[ec.CoachId] } ).ToList()
+            );
+
+            var myEvents = _hitdb1.Schedules
+                .Where(i => scheduleFK.Contains(i.ScheduleId))
+                .ToList();
+
+            // TODO: Each Dic entry needs to contain both a full name and a Id
+            // (So it can be used to "View coach profiles from a list, and from the schedule details")
+            ViewBag.coachesFK = coachesFK;
+
+            return View(myEvents);
+        }
+        
     }
 }
