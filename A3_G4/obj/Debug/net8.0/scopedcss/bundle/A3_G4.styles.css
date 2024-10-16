@@ -24,6 +24,14 @@ a[b-5piv9h8slb] {
   border-color: #1861ac;
 }
 
+.nav-account[b-5piv9h8slb] {
+    position: absolute;
+    right: 0px;
+    text-align: right;
+    display: flex;
+    justify-content: center;
+}
+
 .border-top[b-5piv9h8slb] {
   border-top: 1px solid #e5e5e5;
 }

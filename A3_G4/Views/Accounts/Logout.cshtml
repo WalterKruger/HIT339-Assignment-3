@@ -1,0 +1,19 @@
+﻿@model A3_G4.Models.Account
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<h4>Are you sure you wish to logout?</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Logout">
+            <div class="form-group">
+                <input type="submit" value="Logout" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>

@@ -16,5 +16,6 @@ namespace A3_G4.Data
 
         public DbSet<A3_G4.Models.EnrolledMember> EnrolledMember { get; set; } = default!;
         public DbSet<A3_G4.Models.EventCoach> EventCoach { get; set; } = default!;
+        public DbSet<A3_G4.Models.Account> Account { get; set; } = default!;
     }
 }

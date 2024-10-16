@@ -1,4 +1,5 @@
 using A3_G4.Data;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -19,6 +20,14 @@ namespace A3_G4
             builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 
+            // Custom account logic
+            builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+            .AddCookie(options =>
+            {
+                options.LoginPath = "/Accounts/Login"; // Path to redirect when not authenticated
+                options.AccessDeniedPath = "/Accounts/Login"; // Path to redirect when user has incorrect role
+                options.ExpireTimeSpan = TimeSpan.FromMinutes(30); // Set cookie expiration
+            });
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();

@@ -180,18 +180,17 @@ namespace A3_G4.Controllers
         }
 
         // TODO: Change this to get the currently logged in user and redirect if not logged in
-        public async Task<IActionResult> Enrol(int? id = 1)
+        public async Task<IActionResult> Enrol()
         {
+            var userIdClaim = User.FindFirst("UserId");
+
+            if (userIdClaim == null) { return NotFound(); }
+            int id = Int32.Parse(userIdClaim.Value);
 
             var currentlyEnrolled = _context.EnrolledMember
                 .Where(m => m.MemberId == id)
                 .Select(i => i.ScheduleId)
                 .ToHashSet();
-
-            // Custom dropdown list
-            var memberSelect = _hitdb1.Members.Select(i => new { i.MemberId, FullName = $"{i.FirstName} {i.LastName}" }).ToListAsync();
-            ViewData["MemberFK"] = new SelectList(await memberSelect, "MemberId", "FullName"
-                , id); // TODO: Remove this (it sets the value to the current user)
 
             var scheduleSelect = _hitdb1.Schedules
                 .Where(i => !currentlyEnrolled.Contains(i.ScheduleId))
@@ -208,6 +207,11 @@ namespace A3_G4.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> EnrolConfirmed([Bind("Id,MemberId,ScheduleId")] EnrolledMember enrolledMember)
         {
+            var userIdClaim = User.FindFirst("UserId");
+
+            if (userIdClaim == null) { return NotFound(); }
+            enrolledMember.MemberId = Int32.Parse(userIdClaim.Value);
+
             bool alreadyEnrolled = _context.EnrolledMember
                 .Where(i => (i.ScheduleId == enrolledMember.ScheduleId) && (i.MemberId == enrolledMember.MemberId))
                 .Any();
@@ -223,10 +227,11 @@ namespace A3_G4.Controllers
 
 
 
-        public async Task<IActionResult> MySchedule(int? id = 1) {
-            // TODO: Change this to NotFound() after we implement the account system
-            //       and not default to a value of 1
-            if (id == null) { return View(); }
+        public async Task<IActionResult> MySchedule() {
+            var userIdClaim = User.FindFirst("UserId");
+
+            if (userIdClaim == null) { return NotFound(); }
+            int id = Int32.Parse(userIdClaim.Value);
 
             bool memberExists = _hitdb1.Members.Any(i => i.MemberId == id);
             if (!memberExists) { return NotFound(); }

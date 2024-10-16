@@ -26,6 +26,38 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\walte\Desktop\CDU\HIT339 - Distributed Development\A3\A3_G4\HIT339-Assignment-3\A3_G4
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/walte/Desktop/CDU/HIT339 - Distributed Development/A3/A3_G4/HIT339-Assignment-3/A3_G4/Views/Accounts/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudHNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/walte/Desktop/CDU/HIT339 - Distributed Development/A3/A3_G4/HIT339-Assignment-3/A3_G4/Views/Accounts/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudHNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/walte/Desktop/CDU/HIT339 - Distributed Development/A3/A3_G4/HIT339-Assignment-3/A3_G4/Views/Accounts/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudHNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/walte/Desktop/CDU/HIT339 - Distributed Development/A3/A3_G4/HIT339-Assignment-3/A3_G4/Views/Accounts/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudHNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/walte/Desktop/CDU/HIT339 - Distributed Development/A3/A3_G4/HIT339-Assignment-3/A3_G4/Views/Accounts/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/walte/Desktop/CDU/HIT339 - Distributed Development/A3/A3_G4/HIT339-Assignment-3/A3_G4/Views/Accounts/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudHNcTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/walte/Desktop/CDU/HIT339 - Distributed Development/A3/A3_G4/HIT339-Assignment-3/A3_G4/Views/Accounts/Logout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudHNcTG9nb3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/walte/Desktop/CDU/HIT339 - Distributed Development/A3/A3_G4/HIT339-Assignment-3/A3_G4/Views/Accounts/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudHNcUmVnaXN0ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/walte/Desktop/CDU/HIT339 - Distributed Development/A3/A3_G4/HIT339-Assignment-3/A3_G4/Views/Coaches/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29hY2hlc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

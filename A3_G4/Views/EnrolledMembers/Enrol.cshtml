@@ -2,16 +2,15 @@
 
 @{
     ViewData["Title"] = "Create";
+
+    var userIdClaim = User.FindFirst("UserId");
+
+    if (userIdClaim == null) { throw new ArgumentNullException(); }
+    int? id = Int32.Parse(userIdClaim.Value);
 }
 
 <h1>Enrol in an event</h1>
 
-<form asp-controller="EnrolledMembers" asp-action="Enrol">
-    <p>
-        <label>User <input type="number" min="0" name="id" /></label>
-        <input type="submit" value="Search" />
-    </p>
-</form>
 
 <h4>EnrolledMember</h4>
 <hr />
@@ -19,18 +18,11 @@
     <div class="col-md-4">
         <form asp-action="Enrol">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <h5 style="color:red">Remove after we add acounts</h5>
             <div class="form-group">
-                <!--
                 <label asp-for="MemberId" class="control-label"></label>
-                <input asp-for="MemberId" class="form-control" />
+                <input asp-for="MemberId" class="form-control" readonly value="@id" />
                 <span asp-validation-for="MemberId" class="text-danger"></span>
-                -->
-                @Html.LabelFor(model => model.MemberId, "Member")
-                @Html.DropDownListFor(model => model.MemberId, (SelectList)ViewData["MemberFK"], "Select an option", new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.MemberId)
             </div>
-            <h5 style="color:red">Remove after we add acounts</h5>
             <div class="form-group">
                 <!--<label asp-for="ScheduleId" class="control-label"></label>
                 <input asp-for="ScheduleId" class="form-control" />

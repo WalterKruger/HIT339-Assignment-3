@@ -38,12 +38,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -58,6 +54,10 @@
               "EditorCaption": ""
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "Program.cs",
@@ -67,7 +67,8 @@
               "RelativeToolTip": "A3_G4\\Program.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAABsAAABuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T02:33:02.338Z"
+              "WhenOpened": "2024-10-16T02:33:02.338Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -79,7 +80,8 @@
               "RelativeToolTip": "A3_G4\\Controllers\\AccountsController.cs",
               "ViewState": "AgIAAGMAAAAAAAAAAAAAAGoAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T02:32:04.97Z"
+              "WhenOpened": "2024-10-16T02:32:04.97Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -91,7 +93,8 @@
               "RelativeToolTip": "A3_G4\\Views\\EnrolledMembers\\Enrol.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-16T02:25:53.156Z"
+              "WhenOpened": "2024-10-16T02:25:53.156Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -103,7 +106,8 @@
               "RelativeToolTip": "A3_G4\\Views\\Shared\\_Layout.cshtml",
               "ViewState": "AgIAABsAAAAAAAAAAAAAACsAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-16T02:12:22.747Z"
+              "WhenOpened": "2024-10-16T02:12:22.747Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -115,7 +119,8 @@
               "RelativeToolTip": "A3_G4\\Views\\EnrolledMembers\\MySchedule.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-16T02:19:45.588Z"
+              "WhenOpened": "2024-10-16T02:19:45.588Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",

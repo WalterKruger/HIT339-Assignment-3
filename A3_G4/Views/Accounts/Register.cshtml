@@ -1,0 +1,92 @@
+﻿@model A3_G4.Models.Account
+
+@{
+    ViewData["Title"] = "Register";
+    var enumMember = (int)Account.UserTypes.Member;
+    var enumCoach = (int)Account.UserTypes.Coach;
+    var enumAdmin = (int)Account.UserTypes.Admin;
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<h4>Create a new account</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Register">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Username" class="control-label"></label>
+                <input asp-for="Username" class="form-control" />
+                <span asp-validation-for="Username" class="text-danger"></span>
+            </div>
+            
+            <!--Custom attribute-->
+            <div class="form-group">
+                <label for="password" class="control-label">Password</label>
+                <input type="password" id="password" name="password" class="form-control" required />
+            </div>
+            <!--To make `ModelState.IsValid` (overwrite in the controller)-->
+            <div class="form-group">
+                <input type="hidden" asp-for="PasswordHash" class="form-control" value="junkdata"  />
+            </div>
+
+            <div class="form-group">
+                <label asp-for="UserType" class="control-label"></label>
+                <select onchange="changeType(this)" asp-for="UserType" class="form-control" asp-items="Html.GetEnumSelectList<Account.UserTypes>()" id="TypeSelect"></select>
+                <span asp-validation-for="UserType" class="text-danger"></span>
+            </div>
+
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.UserId, "Member")
+                @Html.DropDownListFor(model => model.UserId, 
+                    (SelectList)ViewData["MemberFK"],
+                    "Select an option",
+                    new { @class = "form-control", id = "MemberSelect", required = true }
+                )
+                @Html.ValidationMessageFor(model => model.UserId)
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.CoachId, "Coach")
+                @Html.DropDownListFor(model => model.CoachId, 
+                    (SelectList)ViewData["CoachFK"], 
+                    "Select an option", 
+                    new { @class = "form-control", id = "CoachSelect", required = true }
+                )
+                @Html.ValidationMessageFor(model => model.CoachId)
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    changeType(document.getElementById("TypeSelect"));
+
+    function changeType(typeSelect) {
+        var selectedType = typeSelect.value;
+
+        var memberSelect = document.getElementById('MemberSelect');
+        var coachSelect = document.getElementById('CoachSelect');
+        
+        if (selectedType == @enumMember) {
+            memberSelect.disabled = false;
+            coachSelect.disabled = true;
+        } else if (selectedType == @enumCoach) {
+            memberSelect.disabled = true;
+            coachSelect.disabled = false;
+        } else if (selectedType == @enumAdmin) {
+            memberSelect.disabled = true;
+            coachSelect.disabled = true;
+        }
+    }
+</script>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
