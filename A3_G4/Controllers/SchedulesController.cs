@@ -7,22 +7,62 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using A3_G4.Data;
 using A3_G4.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace A3_G4.Controllers
 {
     public class SchedulesController : Controller
     {
         private readonly Hitdb1Context _context;
+        private readonly A3Context _localdb;
 
-        public SchedulesController(Hitdb1Context context)
+        public SchedulesController(Hitdb1Context context, A3Context localcontext)
         {
             _context = context;
+            _localdb = localcontext;
+        }
+
+        public class IndexModel
+        {
+            public int ScheduleId { get; set; }
+            public string ScheduleName { get; set; }  // Example attribute for the schedule
+            public List<string> CoachNames { get; set; }  // List of coach names associated with the schedule
+        }
+
+        public class ScheduleWithCoachesViewModel
+        {
+            public Schedule Schedule { get; set; }
+            public List<Coach> Coaches { get; set; }
         }
 
         // GET: Schedules
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Schedules.ToListAsync());
+            
+            var eventCoachFK = _localdb.EventCoach
+                .GroupBy(i => i.ScheduleId)
+                .ToDictionary(
+                    i => i.Key,
+                    i=> i.Select(c => c.CoachId ).ToHashSet()
+                );
+
+            // Can't do a `Dic[i.ScheduleId].Contains(c.CoachId)` in LINQ, so use a loop
+            List<ScheduleWithCoachesViewModel> scheduleWithCoaches = [];
+            foreach (Schedule schedule in await _context.Schedules.ToListAsync())
+            {
+                var toAdd = new ScheduleWithCoachesViewModel { Schedule = schedule, Coaches = [] };
+                
+                if (eventCoachFK.TryGetValue(schedule.ScheduleId, out HashSet<int>? coachForEvent))
+                {
+                    toAdd.Coaches = _context.Coaches.Where(i => coachForEvent.Contains(i.CoachId)).ToList();
+                }
+
+                scheduleWithCoaches.Add(toAdd);
+            }
+            
+
+            //return View(await _context.Schedules.ToListAsync());
+            return View(scheduleWithCoaches);
         }
 
         // GET: Schedules/Details/5
@@ -44,6 +84,7 @@ namespace A3_G4.Controllers
         }
 
         // GET: Schedules/Create
+        [Authorize(Roles = "Admin")]
         public IActionResult Create()
         {
             return View();
@@ -54,6 +95,7 @@ namespace A3_G4.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Create([Bind("ScheduleId,Name,Location,Description")] Schedule schedule)
         {
             if (ModelState.IsValid)
@@ -66,6 +108,7 @@ namespace A3_G4.Controllers
         }
 
         // GET: Schedules/Edit/5
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -86,6 +129,7 @@ namespace A3_G4.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Edit(int id, [Bind("ScheduleId,Name,Location,Description")] Schedule schedule)
         {
             if (id != schedule.ScheduleId)
@@ -117,6 +161,7 @@ namespace A3_G4.Controllers
         }
 
         // GET: Schedules/Delete/5
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -137,6 +182,7 @@ namespace A3_G4.Controllers
         // POST: Schedules/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var schedule = await _context.Schedules.FindAsync(id);

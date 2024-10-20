@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using A3_G4.Data;
 using A3_G4.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace A3_G4.Controllers
 {
@@ -60,6 +61,7 @@ namespace A3_G4.Controllers
         }
 
         // GET: EventCoaches/Create
+        [Authorize(Roles = "Admin")]
         public IActionResult Create()
         {
             // Custom dropdown list
@@ -77,6 +79,7 @@ namespace A3_G4.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Create([Bind("Id,CoachId,ScheduleId")] EventCoach eventCoach)
         {
             if (ModelState.IsValid && VerifyForeignKeys(eventCoach))
@@ -89,6 +92,7 @@ namespace A3_G4.Controllers
         }
 
         // GET: EventCoaches/Edit/5
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -117,6 +121,7 @@ namespace A3_G4.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Edit(int id, [Bind("Id,CoachId,ScheduleId")] EventCoach eventCoach)
         {
             if (id != eventCoach.Id)
@@ -148,6 +153,7 @@ namespace A3_G4.Controllers
         }
 
         // GET: EventCoaches/Delete/5
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -168,6 +174,7 @@ namespace A3_G4.Controllers
         // POST: EventCoaches/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var eventCoach = await _context.EventCoach.FindAsync(id);

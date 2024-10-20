@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using A3_G4.Data;
 using A3_G4.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace A3_G4.Controllers
 {
@@ -35,12 +36,14 @@ namespace A3_G4.Controllers
         }
 
         // GET: EnrolledMembers
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Index()
         {
             return View(await _context.EnrolledMember.ToListAsync());
         }
 
         // GET: EnrolledMembers/Details/5
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -59,6 +62,7 @@ namespace A3_G4.Controllers
         }
 
         // GET: EnrolledMembers/Create
+        [Authorize(Roles = "Admin")]
         public IActionResult Create()
         {
             // Custom dropdown list
@@ -76,6 +80,7 @@ namespace A3_G4.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Create([Bind("Id,MemberId,ScheduleId")] EnrolledMember enrolledMember)
         {
             if (ModelState.IsValid && VerifyForeignKeys(enrolledMember))
@@ -88,6 +93,7 @@ namespace A3_G4.Controllers
         }
 
         // GET: EnrolledMembers/Edit/5
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -116,6 +122,7 @@ namespace A3_G4.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Edit(int id, [Bind("Id,MemberId,ScheduleId")] EnrolledMember enrolledMember)
         {
             if (id != enrolledMember.Id)
@@ -147,6 +154,7 @@ namespace A3_G4.Controllers
         }
 
         // GET: EnrolledMembers/Delete/5
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -167,6 +175,7 @@ namespace A3_G4.Controllers
         // POST: EnrolledMembers/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var enrolledMember = await _context.EnrolledMember.FindAsync(id);
@@ -180,12 +189,13 @@ namespace A3_G4.Controllers
         }
 
         // TODO: Change this to get the currently logged in user and redirect if not logged in
+        [Authorize(Roles = "Admin, Member")]
         public async Task<IActionResult> Enrol()
         {
-            var userIdClaim = User.FindFirst("UserId");
+            var MemberIdClaim = User.FindFirst("MemberId");
 
-            if (userIdClaim == null) { return NotFound(); }
-            int id = Int32.Parse(userIdClaim.Value);
+            if (MemberIdClaim == null) { return NotFound(); }
+            int id = Int32.Parse(MemberIdClaim.Value);
 
             var currentlyEnrolled = _context.EnrolledMember
                 .Where(m => m.MemberId == id)
@@ -205,12 +215,13 @@ namespace A3_G4.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost, ActionName("Enrol")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin, Member")]
         public async Task<IActionResult> EnrolConfirmed([Bind("Id,MemberId,ScheduleId")] EnrolledMember enrolledMember)
         {
-            var userIdClaim = User.FindFirst("UserId");
+            var memberIdClaim = User.FindFirst("MemberId");
 
-            if (userIdClaim == null) { return NotFound(); }
-            enrolledMember.MemberId = Int32.Parse(userIdClaim.Value);
+            if (memberIdClaim == null) { return NotFound(); }
+            enrolledMember.MemberId = Int32.Parse(memberIdClaim.Value);
 
             bool alreadyEnrolled = _context.EnrolledMember
                 .Where(i => (i.ScheduleId == enrolledMember.ScheduleId) && (i.MemberId == enrolledMember.MemberId))
@@ -226,12 +237,12 @@ namespace A3_G4.Controllers
         }
 
 
-
+        [Authorize(Roles = "Admin, Member")]
         public async Task<IActionResult> MySchedule() {
-            var userIdClaim = User.FindFirst("UserId");
+            var MemberIdClaim = User.FindFirst("MemberId");
 
-            if (userIdClaim == null) { return NotFound(); }
-            int id = Int32.Parse(userIdClaim.Value);
+            if (MemberIdClaim == null) { return NotFound(); }
+            int id = Int32.Parse(MemberIdClaim.Value);
 
             bool memberExists = _hitdb1.Members.Any(i => i.MemberId == id);
             if (!memberExists) { return NotFound(); }
@@ -260,6 +271,60 @@ namespace A3_G4.Controllers
 
             return View(myEvents);
         }
-        
+
+
+        [Authorize(Roles = "Member")]
+        public async Task<IActionResult> Cancel(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            // Get the member ID FK for the account
+            var memberIdClaim = User.FindFirst("MemberId");
+
+            if (memberIdClaim == null) { return NotFound(); }
+            int memberId = Int32.Parse(memberIdClaim.Value);
+
+            var scheduleToCancel = await _hitdb1.Schedules.FirstOrDefaultAsync(m => m.ScheduleId == id);
+
+            // Only allowed to cancel events they are enrolled in
+            var memberIsEnrolled = await _context.EnrolledMember
+                .FirstOrDefaultAsync(i => (i.MemberId == memberId) && (i.ScheduleId == id));
+
+            if (scheduleToCancel == null) { return NotFound(); }
+            if (memberIsEnrolled == null) { RedirectToAction(nameof(MySchedule)); }
+
+
+            return View(scheduleToCancel);
+        }
+
+        [HttpPost, ActionName("Cancel")]
+        [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Member")]
+        public async Task<IActionResult> CancelConfirmed(int id)
+        {
+            // Get the account's ID
+            var memberIdClaim = User.FindFirst("MemberId");
+
+            if (memberIdClaim == null) { return NotFound(); }
+            int memberId = Int32.Parse(memberIdClaim.Value);
+
+            var enrollmentToCancel = await _context.EnrolledMember
+                .FirstOrDefaultAsync(i => (i.ScheduleId == id) && (i.MemberId == memberId));
+
+
+            if (enrollmentToCancel != null)
+            {
+                _context.EnrolledMember.Remove(enrollmentToCancel);
+            }
+
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(MySchedule));
+        }
+
+
+
     }
 }

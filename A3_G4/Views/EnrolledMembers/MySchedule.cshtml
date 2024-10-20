@@ -44,9 +44,12 @@
                             </a>
                             <!--Adds space without extending the link--><span>&shy;</span>
                         }
-                    }
-
-                    
+                    } 
+                </td>
+                <td>
+                    <a asp-action="Cancel" asp-route-id="@item.ScheduleId">
+                        Cancel
+                    </a>
                 </td>
             </tr>
         }

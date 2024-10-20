@@ -263,11 +263,28 @@ namespace A3_G4.Controllers
                 return View();
             }
 
+            // 
+            string accountFK;
+            switch (user.UserType) { 
+                case Account.UserTypes.Admin:
+                    accountFK = ""; break;
+
+                case Account.UserTypes.Coach:
+                    accountFK = user.CoachId.ToString(); break;
+
+                case Account.UserTypes.Member:
+                    accountFK = user.UserId.ToString(); break;
+
+                default: throw new Exception();
+            }
+
             // Store the user information so they can login
             var claims = new List<Claim>
             {
                 new Claim(ClaimTypes.Name, user.Username),
                 new Claim("UserId", user.Id.ToString()),
+                new Claim("MemberId", user.UserId.ToString()),
+                new Claim("CoachId", user.CoachId.ToString()),
                 new Claim(ClaimTypes.Role, user.UserType.ToString())
             };
 

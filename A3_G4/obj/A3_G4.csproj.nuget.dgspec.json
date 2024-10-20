@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\OneDrive\\Documents\\GitHub\\HIT339-Assignment-3\\A3_G4\\A3_G4.csproj": {}
+    "C:\\Users\\walte\\Desktop\\CDU\\HIT339 - Distributed Development\\A3\\A3_G4\\HIT339-Assignment-3\\A3_G4\\A3_G4.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\OneDrive\\Documents\\GitHub\\HIT339-Assignment-3\\A3_G4\\A3_G4.csproj": {
+    "C:\\Users\\walte\\Desktop\\CDU\\HIT339 - Distributed Development\\A3\\A3_G4\\HIT339-Assignment-3\\A3_G4\\A3_G4.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\OneDrive\\Documents\\GitHub\\HIT339-Assignment-3\\A3_G4\\A3_G4.csproj",
+        "projectUniqueName": "C:\\Users\\walte\\Desktop\\CDU\\HIT339 - Distributed Development\\A3\\A3_G4\\HIT339-Assignment-3\\A3_G4\\A3_G4.csproj",
         "projectName": "A3_G4",
-        "projectPath": "C:\\Users\\User\\OneDrive\\Documents\\GitHub\\HIT339-Assignment-3\\A3_G4\\A3_G4.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\OneDrive\\Documents\\GitHub\\HIT339-Assignment-3\\A3_G4\\obj\\",
+        "projectPath": "C:\\Users\\walte\\Desktop\\CDU\\HIT339 - Distributed Development\\A3\\A3_G4\\HIT339-Assignment-3\\A3_G4\\A3_G4.csproj",
+        "packagesPath": "C:\\Users\\walte\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\walte\\Desktop\\CDU\\HIT339 - Distributed Development\\A3\\A3_G4\\HIT339-Assignment-3\\A3_G4\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\walte\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -94,7 +94,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

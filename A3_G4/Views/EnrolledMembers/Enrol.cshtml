@@ -1,12 +1,12 @@
 ﻿@model A3_G4.Models.EnrolledMember
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Enrol";
 
-    var userIdClaim = User.FindFirst("UserId");
+    var memberIDClaim = User.FindFirst("MemberId");
 
-    if (userIdClaim == null) { throw new ArgumentNullException(); }
-    int? id = Int32.Parse(userIdClaim.Value);
+    if (memberIDClaim == null) { throw new ArgumentNullException(); }
+    int? id = Int32.Parse(memberIDClaim.Value);
 }
 
 <h1>Enrol in an event</h1>
