@@ -1,4 +1,7 @@
-﻿@* @model IEnumerable<A3_G4.Controllers.SchedulesController.ScheduleWithCoachesViewModel> *@
+﻿
+@* @model IEnumerable<A3_G4.Controllers.SchedulesController.ScheduleWithCoachesViewModel> *@
+
+
 
 @{
     ViewData["Title"] = "Coach Schedules";
@@ -22,7 +25,7 @@
         </tr>
     </thead>
     <tbody>
-   @*      @foreach (var item in Model)
+@*         @foreach (var item in Model)
         {
             <tr>
                 <td>
@@ -33,81 +36,30 @@
                 </td>
                 <td>
                     @item.Member
-                </td>
-                <td>
-                    @if ((ViewBag.coachesFK.ContainsKey(item.ScheduleId)))
-                        @foreach (var coach in ViewBag.coachesFK[item.ScheduleId])
-                        { }
-                </td>
-                <td?>
-                    <a asp-action="Cancel" asp-route-id="@item.ScheduleId">
-                        Cancel
-                    </a>
-                </td>
-            </tr>
-        } *@
-    </tbody>
-</table>
-
-
-
-@* <p>
-    @if (User.IsInRole("Admin")) { <a asp-action="Create">Create New</a> }
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Schedule.Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Schedule.Location)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Schedule.Description)
-            </th>
-            <th>
-                Coaches for event
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Schedule.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Schedule.Location)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Schedule.Description)
-            </td>
-            <td>
-                    @foreach (var coach in item.Coaches)
+                </td> *@
+@*                 <td>
+                    @if ((ViewBag.Member.ContainsKey(item.MemberId)))
                     {
-                        <a asp-area="" asp-controller="Coaches" asp-action="Details" asp-route-id="@coach.CoachId">
-                            @($"{coach.FirstName} {coach.LastName}")
-                        </a>
-                        <span>&shy;</span><!--Adds space without extending the link-->
+                        @foreach (var coach in ViewBag.Member[item.MemberId])
+                        {
+                            <a asp-area="" asp-controller="Coaches" asp-action="Details" asp-route-id="@coach.Id">
+                                @coach.Name
+                            </a>
+                            <!--Adds space without extending the link-->
+
+                            <span>&shy;</span>
+                        }
                     }
-                </td>
-            <td>
-                @if (User.IsInRole("Admin"))
-                {
-                    <span>
-                    <a asp-action="Edit" asp-route-id="@item.Schedule.ScheduleId">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.Schedule.ScheduleId">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Schedule.ScheduleId">Delete</a>
-                    </span>
-                } else 
-                {
-                    <a asp-action="Details" asp-route-id="@item.Schedule.ScheduleId">Details</a>
-                }
-                
-            </td>
-        </tr>
-}
+                </td> *@
+
+            </tr>
+        
+
     </tbody>
 </table>
- *@
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+
+
