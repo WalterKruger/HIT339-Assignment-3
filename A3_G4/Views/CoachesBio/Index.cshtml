@@ -2,10 +2,10 @@
 @model IEnumerable<A3_G4.Models.CoachBio>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Coach Bio";
 }
 
-<h1>Index</h1>
+<h1>Coach Bio</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
@@ -46,8 +46,8 @@
             <td>
                 <a asp-action="Edit" asp-route-id="@item.CoachId">Edit</a> |            
                 <a asp-action="Details" asp-route-id="@item.CoachId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.CoachId">Delete</a>
-                <a asp-action="CoachBioSchedule" asp-route-id="@item.CoachId">Coach Schedule</a>
+                <a asp-action="Delete" asp-route-id="@item.CoachId">Delete</a> |
+                <a asp-action="CoachBioSchedule" asp-route-id="@item.CoachId">Coach Schedules</a>
             </td>
         </tr>
 }

@@ -1,121 +1,12 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\walte\\Desktop\\CDU\\HIT339 - Distributed Development\\A3\\A3_G4\\HIT339-Assignment-3\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{6DF227AD-F801-451D-817C-66A96B3C783D}|A3_G4\\A3_G4.csproj|c:\\users\\walte\\desktop\\cdu\\hit339 - distributed development\\a3\\a3_g4\\hit339-assignment-3\\a3_g4\\controllers\\enrolledmemberscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6DF227AD-F801-451D-817C-66A96B3C783D}|A3_G4\\A3_G4.csproj|solutionrelative:a3_g4\\controllers\\enrolledmemberscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6DF227AD-F801-451D-817C-66A96B3C783D}|A3_G4\\A3_G4.csproj|c:\\users\\walte\\desktop\\cdu\\hit339 - distributed development\\a3\\a3_g4\\hit339-assignment-3\\a3_g4\\views\\enrolledmembers\\myschedule.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6DF227AD-F801-451D-817C-66A96B3C783D}|A3_G4\\A3_G4.csproj|solutionrelative:a3_g4\\views\\enrolledmembers\\myschedule.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6DF227AD-F801-451D-817C-66A96B3C783D}|A3_G4\\A3_G4.csproj|c:\\users\\walte\\desktop\\cdu\\hit339 - distributed development\\a3\\a3_g4\\hit339-assignment-3\\a3_g4\\views\\enrolledmembers\\enrol.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6DF227AD-F801-451D-817C-66A96B3C783D}|A3_G4\\A3_G4.csproj|solutionrelative:a3_g4\\views\\enrolledmembers\\enrol.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6DF227AD-F801-451D-817C-66A96B3C783D}|A3_G4\\A3_G4.csproj|c:\\users\\walte\\desktop\\cdu\\hit339 - distributed development\\a3\\a3_g4\\hit339-assignment-3\\a3_g4\\controllers\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6DF227AD-F801-451D-817C-66A96B3C783D}|A3_G4\\A3_G4.csproj|solutionrelative:a3_g4\\controllers\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6DF227AD-F801-451D-817C-66A96B3C783D}|A3_G4\\A3_G4.csproj|c:\\users\\walte\\desktop\\cdu\\hit339 - distributed development\\a3\\a3_g4\\hit339-assignment-3\\a3_g4\\views\\schedules\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6DF227AD-F801-451D-817C-66A96B3C783D}|A3_G4\\A3_G4.csproj|solutionrelative:a3_g4\\views\\schedules\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6DF227AD-F801-451D-817C-66A96B3C783D}|A3_G4\\A3_G4.csproj|c:\\users\\walte\\desktop\\cdu\\hit339 - distributed development\\a3\\a3_g4\\hit339-assignment-3\\a3_g4\\views\\enrolledmembers\\cancel.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6DF227AD-F801-451D-817C-66A96B3C783D}|A3_G4\\A3_G4.csproj|solutionrelative:a3_g4\\views\\enrolledmembers\\cancel.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    }
-  ],
+  "WorkspaceRootPath": "C:\\Users\\User\\OneDrive\\Documents\\GitHub\\HIT339-Assignment-3\\",
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 5,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Enrol.cshtml",
-              "DocumentMoniker": "C:\\Users\\walte\\Desktop\\CDU\\HIT339 - Distributed Development\\A3\\A3_G4\\HIT339-Assignment-3\\A3_G4\\Views\\EnrolledMembers\\Enrol.cshtml",
-              "RelativeDocumentMoniker": "A3_G4\\Views\\EnrolledMembers\\Enrol.cshtml",
-              "ToolTip": "C:\\Users\\walte\\Desktop\\CDU\\HIT339 - Distributed Development\\A3\\A3_G4\\HIT339-Assignment-3\\A3_G4\\Views\\EnrolledMembers\\Enrol.cshtml",
-              "RelativeToolTip": "A3_G4\\Views\\EnrolledMembers\\Enrol.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-20T03:07:30.204Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\walte\\Desktop\\CDU\\HIT339 - Distributed Development\\A3\\A3_G4\\HIT339-Assignment-3\\A3_G4\\Views\\Schedules\\Index.cshtml",
-              "RelativeDocumentMoniker": "A3_G4\\Views\\Schedules\\Index.cshtml",
-              "ToolTip": "C:\\Users\\walte\\Desktop\\CDU\\HIT339 - Distributed Development\\A3\\A3_G4\\HIT339-Assignment-3\\A3_G4\\Views\\Schedules\\Index.cshtml",
-              "RelativeToolTip": "A3_G4\\Views\\Schedules\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADsAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-19T06:27:29.96Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Cancel.cshtml",
-              "DocumentMoniker": "C:\\Users\\walte\\Desktop\\CDU\\HIT339 - Distributed Development\\A3\\A3_G4\\HIT339-Assignment-3\\A3_G4\\Views\\EnrolledMembers\\Cancel.cshtml",
-              "RelativeDocumentMoniker": "A3_G4\\Views\\EnrolledMembers\\Cancel.cshtml",
-              "ToolTip": "C:\\Users\\walte\\Desktop\\CDU\\HIT339 - Distributed Development\\A3\\A3_G4\\HIT339-Assignment-3\\A3_G4\\Views\\EnrolledMembers\\Cancel.cshtml",
-              "RelativeToolTip": "A3_G4\\Views\\EnrolledMembers\\Cancel.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-20T02:37:10.447Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MySchedule.cshtml",
-              "DocumentMoniker": "C:\\Users\\walte\\Desktop\\CDU\\HIT339 - Distributed Development\\A3\\A3_G4\\HIT339-Assignment-3\\A3_G4\\Views\\EnrolledMembers\\MySchedule.cshtml",
-              "RelativeDocumentMoniker": "A3_G4\\Views\\EnrolledMembers\\MySchedule.cshtml",
-              "ToolTip": "C:\\Users\\walte\\Desktop\\CDU\\HIT339 - Distributed Development\\A3\\A3_G4\\HIT339-Assignment-3\\A3_G4\\Views\\EnrolledMembers\\MySchedule.cshtml",
-              "RelativeToolTip": "A3_G4\\Views\\EnrolledMembers\\MySchedule.cshtml",
-              "ViewState": "AgIAACoAAAAAAAAAAAAAAAsAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-19T06:04:43.773Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "EnrolledMembersController.cs",
-              "DocumentMoniker": "C:\\Users\\walte\\Desktop\\CDU\\HIT339 - Distributed Development\\A3\\A3_G4\\HIT339-Assignment-3\\A3_G4\\Controllers\\EnrolledMembersController.cs",
-              "RelativeDocumentMoniker": "A3_G4\\Controllers\\EnrolledMembersController.cs",
-              "ToolTip": "C:\\Users\\walte\\Desktop\\CDU\\HIT339 - Distributed Development\\A3\\A3_G4\\HIT339-Assignment-3\\A3_G4\\Controllers\\EnrolledMembersController.cs",
-              "RelativeToolTip": "A3_G4\\Controllers\\EnrolledMembersController.cs",
-              "ViewState": "AgIAALQAAAAAAAAAAAAAALgAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T02:19:53.613Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AccountsController.cs",
-              "DocumentMoniker": "C:\\Users\\walte\\Desktop\\CDU\\HIT339 - Distributed Development\\A3\\A3_G4\\HIT339-Assignment-3\\A3_G4\\Controllers\\AccountsController.cs",
-              "RelativeDocumentMoniker": "A3_G4\\Controllers\\AccountsController.cs",
-              "ToolTip": "C:\\Users\\walte\\Desktop\\CDU\\HIT339 - Distributed Development\\A3\\A3_G4\\HIT339-Assignment-3\\A3_G4\\Controllers\\AccountsController.cs",
-              "RelativeToolTip": "A3_G4\\Controllers\\AccountsController.cs",
-              "ViewState": "AgIAABABAAAAAAAAAAAAABwBAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T02:49:12.807Z"
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }

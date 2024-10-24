@@ -1,0 +1,113 @@
+﻿@* @model IEnumerable<A3_G4.Controllers.SchedulesController.ScheduleWithCoachesViewModel> *@
+
+@{
+    ViewData["Title"] = "Coach Bio Schedules";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<br>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Event name
+            </th>
+            <th>
+                Location
+            </th>
+            <th>
+                Members
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+   @*      @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.Name
+                </td>
+                <td>
+                    @item.Location
+                </td>
+                <td>
+                    @item.Member
+                </td>
+                <td>
+                    @if ((ViewBag.coachesFK.ContainsKey(item.ScheduleId)))
+                        @foreach (var coach in ViewBag.coachesFK[item.ScheduleId])
+                        { }
+                </td>
+                <td?>
+                    <a asp-action="Cancel" asp-route-id="@item.ScheduleId">
+                        Cancel
+                    </a>
+                </td>
+            </tr>
+        } *@
+    </tbody>
+</table>
+
+
+
+@* <p>
+    @if (User.IsInRole("Admin")) { <a asp-action="Create">Create New</a> }
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Schedule.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Schedule.Location)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Schedule.Description)
+            </th>
+            <th>
+                Coaches for event
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Schedule.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Schedule.Location)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Schedule.Description)
+            </td>
+            <td>
+                    @foreach (var coach in item.Coaches)
+                    {
+                        <a asp-area="" asp-controller="Coaches" asp-action="Details" asp-route-id="@coach.CoachId">
+                            @($"{coach.FirstName} {coach.LastName}")
+                        </a>
+                        <span>&shy;</span><!--Adds space without extending the link-->
+                    }
+                </td>
+            <td>
+                @if (User.IsInRole("Admin"))
+                {
+                    <span>
+                    <a asp-action="Edit" asp-route-id="@item.Schedule.ScheduleId">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Schedule.ScheduleId">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Schedule.ScheduleId">Delete</a>
+                    </span>
+                } else 
+                {
+                    <a asp-action="Details" asp-route-id="@item.Schedule.ScheduleId">Details</a>
+                }
+                
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+ *@

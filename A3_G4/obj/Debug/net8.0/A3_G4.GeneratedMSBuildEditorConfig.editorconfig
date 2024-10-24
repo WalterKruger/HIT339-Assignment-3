@@ -17,203 +17,207 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = A3_G4
 build_property.RootNamespace = A3_G4
-build_property.ProjectDir = C:\Users\walte\Desktop\CDU\HIT339 - Distributed Development\A3\A3_G4\HIT339-Assignment-3\A3_G4\
+build_property.ProjectDir = C:\Users\User\OneDrive\Documents\GitHub\HIT339-Assignment-3\A3_G4\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\walte\Desktop\CDU\HIT339 - Distributed Development\A3\A3_G4\HIT339-Assignment-3\A3_G4
+build_property.MSBuildProjectDirectory = C:\Users\User\OneDrive\Documents\GitHub\HIT339-Assignment-3\A3_G4
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/walte/Desktop/CDU/HIT339 - Distributed Development/A3/A3_G4/HIT339-Assignment-3/A3_G4/Views/Accounts/Create.cshtml]
+[C:/Users/User/OneDrive/Documents/GitHub/HIT339-Assignment-3/A3_G4/Views/Accounts/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudHNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/walte/Desktop/CDU/HIT339 - Distributed Development/A3/A3_G4/HIT339-Assignment-3/A3_G4/Views/Accounts/Delete.cshtml]
+[C:/Users/User/OneDrive/Documents/GitHub/HIT339-Assignment-3/A3_G4/Views/Accounts/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudHNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/walte/Desktop/CDU/HIT339 - Distributed Development/A3/A3_G4/HIT339-Assignment-3/A3_G4/Views/Accounts/Details.cshtml]
+[C:/Users/User/OneDrive/Documents/GitHub/HIT339-Assignment-3/A3_G4/Views/Accounts/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudHNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/walte/Desktop/CDU/HIT339 - Distributed Development/A3/A3_G4/HIT339-Assignment-3/A3_G4/Views/Accounts/Edit.cshtml]
+[C:/Users/User/OneDrive/Documents/GitHub/HIT339-Assignment-3/A3_G4/Views/Accounts/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudHNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/walte/Desktop/CDU/HIT339 - Distributed Development/A3/A3_G4/HIT339-Assignment-3/A3_G4/Views/Accounts/Index.cshtml]
+[C:/Users/User/OneDrive/Documents/GitHub/HIT339-Assignment-3/A3_G4/Views/Accounts/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/walte/Desktop/CDU/HIT339 - Distributed Development/A3/A3_G4/HIT339-Assignment-3/A3_G4/Views/Accounts/Login.cshtml]
+[C:/Users/User/OneDrive/Documents/GitHub/HIT339-Assignment-3/A3_G4/Views/Accounts/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudHNcTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/walte/Desktop/CDU/HIT339 - Distributed Development/A3/A3_G4/HIT339-Assignment-3/A3_G4/Views/Accounts/Logout.cshtml]
+[C:/Users/User/OneDrive/Documents/GitHub/HIT339-Assignment-3/A3_G4/Views/Accounts/Logout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudHNcTG9nb3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/walte/Desktop/CDU/HIT339 - Distributed Development/A3/A3_G4/HIT339-Assignment-3/A3_G4/Views/Accounts/Register.cshtml]
+[C:/Users/User/OneDrive/Documents/GitHub/HIT339-Assignment-3/A3_G4/Views/Accounts/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudHNcUmVnaXN0ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/walte/Desktop/CDU/HIT339 - Distributed Development/A3/A3_G4/HIT339-Assignment-3/A3_G4/Views/CoachesBio/Create.cshtml]
+[C:/Users/User/OneDrive/Documents/GitHub/HIT339-Assignment-3/A3_G4/Views/CoachesBio/CoachBioSchedule.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29hY2hlc0Jpb1xDb2FjaEJpb1NjaGVkdWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/OneDrive/Documents/GitHub/HIT339-Assignment-3/A3_G4/Views/CoachesBio/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29hY2hlc0Jpb1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/walte/Desktop/CDU/HIT339 - Distributed Development/A3/A3_G4/HIT339-Assignment-3/A3_G4/Views/CoachesBio/Delete.cshtml]
+[C:/Users/User/OneDrive/Documents/GitHub/HIT339-Assignment-3/A3_G4/Views/CoachesBio/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29hY2hlc0Jpb1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/walte/Desktop/CDU/HIT339 - Distributed Development/A3/A3_G4/HIT339-Assignment-3/A3_G4/Views/CoachesBio/Details.cshtml]
+[C:/Users/User/OneDrive/Documents/GitHub/HIT339-Assignment-3/A3_G4/Views/CoachesBio/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29hY2hlc0Jpb1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/walte/Desktop/CDU/HIT339 - Distributed Development/A3/A3_G4/HIT339-Assignment-3/A3_G4/Views/CoachesBio/Edit.cshtml]
+[C:/Users/User/OneDrive/Documents/GitHub/HIT339-Assignment-3/A3_G4/Views/CoachesBio/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29hY2hlc0Jpb1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/walte/Desktop/CDU/HIT339 - Distributed Development/A3/A3_G4/HIT339-Assignment-3/A3_G4/Views/CoachesBio/Index.cshtml]
+[C:/Users/User/OneDrive/Documents/GitHub/HIT339-Assignment-3/A3_G4/Views/CoachesBio/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29hY2hlc0Jpb1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/walte/Desktop/CDU/HIT339 - Distributed Development/A3/A3_G4/HIT339-Assignment-3/A3_G4/Views/Coaches/Create.cshtml]
+[C:/Users/User/OneDrive/Documents/GitHub/HIT339-Assignment-3/A3_G4/Views/Coaches/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29hY2hlc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/walte/Desktop/CDU/HIT339 - Distributed Development/A3/A3_G4/HIT339-Assignment-3/A3_G4/Views/Coaches/Delete.cshtml]
+[C:/Users/User/OneDrive/Documents/GitHub/HIT339-Assignment-3/A3_G4/Views/Coaches/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29hY2hlc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/walte/Desktop/CDU/HIT339 - Distributed Development/A3/A3_G4/HIT339-Assignment-3/A3_G4/Views/Coaches/Details.cshtml]
+[C:/Users/User/OneDrive/Documents/GitHub/HIT339-Assignment-3/A3_G4/Views/Coaches/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29hY2hlc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/walte/Desktop/CDU/HIT339 - Distributed Development/A3/A3_G4/HIT339-Assignment-3/A3_G4/Views/Coaches/Edit.cshtml]
+[C:/Users/User/OneDrive/Documents/GitHub/HIT339-Assignment-3/A3_G4/Views/Coaches/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29hY2hlc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/walte/Desktop/CDU/HIT339 - Distributed Development/A3/A3_G4/HIT339-Assignment-3/A3_G4/Views/Coaches/Index.cshtml]
+[C:/Users/User/OneDrive/Documents/GitHub/HIT339-Assignment-3/A3_G4/Views/Coaches/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29hY2hlc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/walte/Desktop/CDU/HIT339 - Distributed Development/A3/A3_G4/HIT339-Assignment-3/A3_G4/Views/EnrolledMembers/Cancel.cshtml]
+[C:/Users/User/OneDrive/Documents/GitHub/HIT339-Assignment-3/A3_G4/Views/EnrolledMembers/Cancel.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5yb2xsZWRNZW1iZXJzXENhbmNlbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/walte/Desktop/CDU/HIT339 - Distributed Development/A3/A3_G4/HIT339-Assignment-3/A3_G4/Views/EnrolledMembers/Create.cshtml]
+[C:/Users/User/OneDrive/Documents/GitHub/HIT339-Assignment-3/A3_G4/Views/EnrolledMembers/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5yb2xsZWRNZW1iZXJzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/walte/Desktop/CDU/HIT339 - Distributed Development/A3/A3_G4/HIT339-Assignment-3/A3_G4/Views/EnrolledMembers/Delete.cshtml]
+[C:/Users/User/OneDrive/Documents/GitHub/HIT339-Assignment-3/A3_G4/Views/EnrolledMembers/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5yb2xsZWRNZW1iZXJzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/walte/Desktop/CDU/HIT339 - Distributed Development/A3/A3_G4/HIT339-Assignment-3/A3_G4/Views/EnrolledMembers/Details.cshtml]
+[C:/Users/User/OneDrive/Documents/GitHub/HIT339-Assignment-3/A3_G4/Views/EnrolledMembers/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5yb2xsZWRNZW1iZXJzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/walte/Desktop/CDU/HIT339 - Distributed Development/A3/A3_G4/HIT339-Assignment-3/A3_G4/Views/EnrolledMembers/Edit.cshtml]
+[C:/Users/User/OneDrive/Documents/GitHub/HIT339-Assignment-3/A3_G4/Views/EnrolledMembers/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5yb2xsZWRNZW1iZXJzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/walte/Desktop/CDU/HIT339 - Distributed Development/A3/A3_G4/HIT339-Assignment-3/A3_G4/Views/EnrolledMembers/Enrol.cshtml]
+[C:/Users/User/OneDrive/Documents/GitHub/HIT339-Assignment-3/A3_G4/Views/EnrolledMembers/Enrol.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5yb2xsZWRNZW1iZXJzXEVucm9sLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/walte/Desktop/CDU/HIT339 - Distributed Development/A3/A3_G4/HIT339-Assignment-3/A3_G4/Views/EnrolledMembers/Index.cshtml]
+[C:/Users/User/OneDrive/Documents/GitHub/HIT339-Assignment-3/A3_G4/Views/EnrolledMembers/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5yb2xsZWRNZW1iZXJzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/walte/Desktop/CDU/HIT339 - Distributed Development/A3/A3_G4/HIT339-Assignment-3/A3_G4/Views/EnrolledMembers/MySchedule.cshtml]
+[C:/Users/User/OneDrive/Documents/GitHub/HIT339-Assignment-3/A3_G4/Views/EnrolledMembers/MySchedule.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5yb2xsZWRNZW1iZXJzXE15U2NoZWR1bGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/walte/Desktop/CDU/HIT339 - Distributed Development/A3/A3_G4/HIT339-Assignment-3/A3_G4/Views/EventCoaches/Create.cshtml]
+[C:/Users/User/OneDrive/Documents/GitHub/HIT339-Assignment-3/A3_G4/Views/EventCoaches/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRDb2FjaGVzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/walte/Desktop/CDU/HIT339 - Distributed Development/A3/A3_G4/HIT339-Assignment-3/A3_G4/Views/EventCoaches/Delete.cshtml]
+[C:/Users/User/OneDrive/Documents/GitHub/HIT339-Assignment-3/A3_G4/Views/EventCoaches/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRDb2FjaGVzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/walte/Desktop/CDU/HIT339 - Distributed Development/A3/A3_G4/HIT339-Assignment-3/A3_G4/Views/EventCoaches/Details.cshtml]
+[C:/Users/User/OneDrive/Documents/GitHub/HIT339-Assignment-3/A3_G4/Views/EventCoaches/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRDb2FjaGVzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/walte/Desktop/CDU/HIT339 - Distributed Development/A3/A3_G4/HIT339-Assignment-3/A3_G4/Views/EventCoaches/Edit.cshtml]
+[C:/Users/User/OneDrive/Documents/GitHub/HIT339-Assignment-3/A3_G4/Views/EventCoaches/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRDb2FjaGVzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/walte/Desktop/CDU/HIT339 - Distributed Development/A3/A3_G4/HIT339-Assignment-3/A3_G4/Views/EventCoaches/Index.cshtml]
+[C:/Users/User/OneDrive/Documents/GitHub/HIT339-Assignment-3/A3_G4/Views/EventCoaches/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRDb2FjaGVzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/walte/Desktop/CDU/HIT339 - Distributed Development/A3/A3_G4/HIT339-Assignment-3/A3_G4/Views/Home/Index.cshtml]
+[C:/Users/User/OneDrive/Documents/GitHub/HIT339-Assignment-3/A3_G4/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/walte/Desktop/CDU/HIT339 - Distributed Development/A3/A3_G4/HIT339-Assignment-3/A3_G4/Views/Home/Privacy.cshtml]
+[C:/Users/User/OneDrive/Documents/GitHub/HIT339-Assignment-3/A3_G4/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/walte/Desktop/CDU/HIT339 - Distributed Development/A3/A3_G4/HIT339-Assignment-3/A3_G4/Views/Members/Create.cshtml]
+[C:/Users/User/OneDrive/Documents/GitHub/HIT339-Assignment-3/A3_G4/Views/Members/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVtYmVyc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/walte/Desktop/CDU/HIT339 - Distributed Development/A3/A3_G4/HIT339-Assignment-3/A3_G4/Views/Members/Delete.cshtml]
+[C:/Users/User/OneDrive/Documents/GitHub/HIT339-Assignment-3/A3_G4/Views/Members/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVtYmVyc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/walte/Desktop/CDU/HIT339 - Distributed Development/A3/A3_G4/HIT339-Assignment-3/A3_G4/Views/Members/Details.cshtml]
+[C:/Users/User/OneDrive/Documents/GitHub/HIT339-Assignment-3/A3_G4/Views/Members/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVtYmVyc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/walte/Desktop/CDU/HIT339 - Distributed Development/A3/A3_G4/HIT339-Assignment-3/A3_G4/Views/Members/Edit.cshtml]
+[C:/Users/User/OneDrive/Documents/GitHub/HIT339-Assignment-3/A3_G4/Views/Members/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVtYmVyc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/walte/Desktop/CDU/HIT339 - Distributed Development/A3/A3_G4/HIT339-Assignment-3/A3_G4/Views/Members/Index.cshtml]
+[C:/Users/User/OneDrive/Documents/GitHub/HIT339-Assignment-3/A3_G4/Views/Members/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVtYmVyc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/walte/Desktop/CDU/HIT339 - Distributed Development/A3/A3_G4/HIT339-Assignment-3/A3_G4/Views/Schedules/Create.cshtml]
+[C:/Users/User/OneDrive/Documents/GitHub/HIT339-Assignment-3/A3_G4/Views/Schedules/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2NoZWR1bGVzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/walte/Desktop/CDU/HIT339 - Distributed Development/A3/A3_G4/HIT339-Assignment-3/A3_G4/Views/Schedules/Delete.cshtml]
+[C:/Users/User/OneDrive/Documents/GitHub/HIT339-Assignment-3/A3_G4/Views/Schedules/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2NoZWR1bGVzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/walte/Desktop/CDU/HIT339 - Distributed Development/A3/A3_G4/HIT339-Assignment-3/A3_G4/Views/Schedules/Details.cshtml]
+[C:/Users/User/OneDrive/Documents/GitHub/HIT339-Assignment-3/A3_G4/Views/Schedules/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2NoZWR1bGVzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/walte/Desktop/CDU/HIT339 - Distributed Development/A3/A3_G4/HIT339-Assignment-3/A3_G4/Views/Schedules/Edit.cshtml]
+[C:/Users/User/OneDrive/Documents/GitHub/HIT339-Assignment-3/A3_G4/Views/Schedules/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2NoZWR1bGVzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/walte/Desktop/CDU/HIT339 - Distributed Development/A3/A3_G4/HIT339-Assignment-3/A3_G4/Views/Schedules/Index.cshtml]
+[C:/Users/User/OneDrive/Documents/GitHub/HIT339-Assignment-3/A3_G4/Views/Schedules/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2NoZWR1bGVzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/walte/Desktop/CDU/HIT339 - Distributed Development/A3/A3_G4/HIT339-Assignment-3/A3_G4/Views/Shared/Error.cshtml]
+[C:/Users/User/OneDrive/Documents/GitHub/HIT339-Assignment-3/A3_G4/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/walte/Desktop/CDU/HIT339 - Distributed Development/A3/A3_G4/HIT339-Assignment-3/A3_G4/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/User/OneDrive/Documents/GitHub/HIT339-Assignment-3/A3_G4/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/walte/Desktop/CDU/HIT339 - Distributed Development/A3/A3_G4/HIT339-Assignment-3/A3_G4/Views/_ViewImports.cshtml]
+[C:/Users/User/OneDrive/Documents/GitHub/HIT339-Assignment-3/A3_G4/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/walte/Desktop/CDU/HIT339 - Distributed Development/A3/A3_G4/HIT339-Assignment-3/A3_G4/Views/_ViewStart.cshtml]
+[C:/Users/User/OneDrive/Documents/GitHub/HIT339-Assignment-3/A3_G4/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/walte/Desktop/CDU/HIT339 - Distributed Development/A3/A3_G4/HIT339-Assignment-3/A3_G4/Views/Shared/_Layout.cshtml]
+[C:/Users/User/OneDrive/Documents/GitHub/HIT339-Assignment-3/A3_G4/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-5piv9h8slb
