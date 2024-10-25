@@ -14,10 +14,12 @@ namespace A3_G4.Controllers
     public class CoachesBioController : Controller
     {
         private readonly Hitdb1Context _context;
+        private readonly A3Context _localdb;
 
-        public CoachesBioController(Hitdb1Context context)
+        public CoachesBioController(Hitdb1Context context, A3Context localcontext)
         {
             _context = context;
+            _localdb = localcontext;
         }
 
         // GET: CoachesBio
@@ -43,6 +45,13 @@ namespace A3_G4.Controllers
         }
 
 
+        public class CoachScheduleViewModel
+        {
+            public Schedule Schedule { get; set; }
+            public List<Member> Members { get; set; }
+        }
+
+
         // GET: CoachesBio/CoachBioSchedule/5
         public async Task<IActionResult> CoachBioSchedule(int? id)
         {
@@ -51,19 +60,41 @@ namespace A3_G4.Controllers
                 return NotFound();
             }
 
-            var coachBio = await _context.Coaches
-                .FirstOrDefaultAsync(m => m.CoachId == id);
-            if (coachBio == null)
+            var scheduleCoachFK = _localdb.EventCoach
+                .Where(i => i.CoachId == id)
+                .Select(i => i.ScheduleId)
+                .ToHashSet();
+
+            var scheduleForCoach = await _context.Schedules
+                .Where(i => scheduleCoachFK.Contains(i.ScheduleId))
+                .ToListAsync();
 
 
+            var memberNameFromID = _context.Members.ToDictionary(i => i.MemberId, i => $"{i.FirstName} {i.LastName}");
 
-            {
-                return NotFound();
-            }
+            var memberIdForSchedule = _localdb.EnrolledMember
+                //.Where(i => scheduleCoachFK.Contains(i.ScheduleId))
+                .GroupBy(i => i.ScheduleId)
+                .ToDictionary(
+                    i => i.Key,
+                    i => i.Select(m => new { Id = m.MemberId, Name = memberNameFromID[m.MemberId] })
+                );
 
-            return View(coachBio);
+            ViewBag.membersFK = memberIdForSchedule;
+
+
+            return View(scheduleForCoach);
         }
 
+        // Redirect coach to their `CoachBioSchedule` page based on their login information
+        public IActionResult MyScheduleCoach() {
+            var MemberIdClaim = User.FindFirst("CoachId");
+
+            if (MemberIdClaim == null) { return NotFound(); }
+            int id = Int32.Parse(MemberIdClaim.Value);
+
+            return RedirectToAction("CoachBioSchedule", new { id });
+        }
 
 
         // GET: CoachesBio/Details/5

@@ -265,8 +265,7 @@ namespace A3_G4.Controllers
                 .Where(i => scheduleFK.Contains(i.ScheduleId))
                 .ToList();
 
-            // TODO: Each Dic entry needs to contain both a full name and a Id
-            // (So it can be used to "View coach profiles from a list, and from the schedule details")
+
             ViewBag.coachesFK = coachesFK;
 
             return View(myEvents);

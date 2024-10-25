@@ -22,12 +22,6 @@ namespace A3_G4.Controllers
             _localdb = localcontext;
         }
 
-        public class IndexModel
-        {
-            public int ScheduleId { get; set; }
-            public string ScheduleName { get; set; }  // Example attribute for the schedule
-            public List<string> CoachNames { get; set; }  // List of coach names associated with the schedule
-        }
 
         public class ScheduleWithCoachesViewModel
         {

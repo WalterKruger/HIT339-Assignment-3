@@ -1,6 +1,4 @@
-﻿
-@* @model IEnumerable<A3_G4.Controllers.SchedulesController.ScheduleWithCoachesViewModel> *@
-
+﻿@model IEnumerable<A3_G4.Models.Schedule>
 
 
 @{
@@ -14,10 +12,10 @@
     <thead>
         <tr>
             <th>
-                Event name
+                @Html.DisplayNameFor(model => model.Name)
             </th>
             <th>
-                Location
+                @Html.DisplayNameFor(model => model.Location)
             </th>
             <th>
                 Members
@@ -25,36 +23,31 @@
         </tr>
     </thead>
     <tbody>
-@*         @foreach (var item in Model)
+        @foreach (var item in Model)
         {
-            <tr>
-                <td>
-                    @item.Name
-                </td>
-                <td>
-                    @item.Location
-                </td>
-                <td>
-                    @item.Member
-                </td> *@
-@*                 <td>
-                    @if ((ViewBag.Member.ContainsKey(item.MemberId)))
+        <tr>
+            <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => item.Location)
+            </td>
+            <td>
+                @if ((ViewBag.membersFK.ContainsKey(item.ScheduleId)))
+                {
+                    @foreach (var member in ViewBag.membersFK[item.ScheduleId])
                     {
-                        @foreach (var coach in ViewBag.Member[item.MemberId])
-                        {
-                            <a asp-area="" asp-controller="Coaches" asp-action="Details" asp-route-id="@coach.Id">
-                                @coach.Name
-                            </a>
-                            <!--Adds space without extending the link-->
-
-                            <span>&shy;</span>
-                        }
+                        <a asp-area="" asp-controller="Members" asp-action="Details" asp-route-id="@member.Id">
+                            @member.Name
+                        </a>
+                        <!--Adds space without extending the link-->
+                        <span>&shy;</span>
                     }
-                </td> *@
-
-            </tr>
+                }
+            </td>
+        </tr>
+        }
         
-
     </tbody>
 </table>
 <div>

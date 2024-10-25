@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using A3_G4.Data;
 using A3_G4.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace A3_G4.Controllers
 {
@@ -44,6 +45,7 @@ namespace A3_G4.Controllers
         }
 
         // GET: Members/Create
+        [Authorize(Roles = "Admin")]
         public IActionResult Create()
         {
             return View();
@@ -54,6 +56,7 @@ namespace A3_G4.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Create([Bind("MemberId,FirstName,LastName,Email,Active")] Member member)
         {
             if (ModelState.IsValid)
@@ -66,6 +69,7 @@ namespace A3_G4.Controllers
         }
 
         // GET: Members/Edit/5
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -86,6 +90,7 @@ namespace A3_G4.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Edit(int id, [Bind("MemberId,FirstName,LastName,Email,Active")] Member member)
         {
             if (id != member.MemberId)
@@ -117,6 +122,7 @@ namespace A3_G4.Controllers
         }
 
         // GET: Members/Delete/5
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -137,6 +143,7 @@ namespace A3_G4.Controllers
         // POST: Members/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var member = await _context.Members.FindAsync(id);
